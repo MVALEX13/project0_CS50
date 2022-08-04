@@ -1,0 +1,39 @@
+
+.grid-container {
+
+    /*grids creation*/
+    display: grid;
+
+    grid-template-columns: auto auto auto;
+
+    /*ecart qui sépart toutes les case entre elles*/
+    gap: 10px;
+
+    background-color: #2196F3;
+    padding: 10px;
+
+  }
+  
+  .grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+  }
+  
+  .item4 
+  {
+    background-color: red;
+    grid-column-start: 1;
+    grid-column-end: 4;
+
+    /*enable flex reorganization*/
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: space-around;
+
+    align-self: center;
+
+  }
