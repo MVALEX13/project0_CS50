@@ -7,21 +7,52 @@
     </head>
 
     <body>
-        <h1>VALTech Web Browser</h1>
+        
+        <nav id="Google_search_nav">
+            <!-- unorganized list -->
+            <div>
+                <a href="image_search_page.html">Images</a>
+                <a href="advanced_search_page.html">Advanced</a>
+            </div>
+        </nav>
+
+        <h1><strong>S</strong>pace <strong>I</strong>nternational <strong>B</strong>rowser</h1>
 
         <div class="grid-container">
-            <div class="item1"></div>
-            <div class="item2"></div>
-            <div class="item3"></div>
+            <div class="item1" style="background-color: white;">
+                <img src="images/S.png" alt="S">
+            </div>
+            <div class="item2" style="background-color: white;">
+                <img src="images/I.png" alt="I">
+            </div>
+            <div class="item3" style="background-color: white;">
+                <img src="images/B.png" alt="B">
+            </div>
+
+            <!-- requete (querie) au serveur de google -->
+            <!-- Le code backend de google est codé de manière à traité les informations 
+            dont le nom est name ="q" en les assemblant de la sorte dans l'url : 
+            "https://google.com/search?q=my_research" ce chemin est créé par le backend de google -->
+
             <div class="item4">
+                <!-- action tells us toward quel web serveur datas will be send and treated -->
                 <form action="https://google.com/search">
+                        <!-- name used for the treatment of the form -->
                         <input type="text" name="q">
+                        <!-- "submit" to specify a button -->
                         <input type="submit" value="Google Search">
                 </form>
             </div>
-            <div class="item5"></div> 
-            <div class="item6"></div>
-            <div class="item7"></div>  
+
+            <div class="item5">
+                <img src="images/space1.jpg" alt="Arianne5">
+            </div> 
+            <div class="item6">
+                <img src="images/space2.jpg" alt="rover">
+            </div>
+            <div class="item7">
+                <img src="images/space3.jpg" alt="satellite">
+            </div>  
         </div> 
     </body>
 </html>

@@ -1,0 +1,7 @@
+# git ignored files
+
+style.map
+.sass-cache
+
+style
+style.css.map

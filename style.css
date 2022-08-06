@@ -1,8 +1,29 @@
 @charset "UTF-8";
+/*root is a CSS (not even SCSS) container used to declare variable*/
+/*declare global variables given that :root might be the parent of all blocks*/
+:root {
+  /* CSS variable */
+  --text-color:red; }
+
+#Google_search_nav {
+  /*ENABLE flex organization*/ }
+  #Google_search_nav div {
+    display: flex;
+    /*principal axis : x*/
+    flex-direction: row;
+    /*blocks positionned to the right of the parent*/
+    justify-content: right;
+    /*Google Image and Google advanced search links*/ }
+    #Google_search_nav div a {
+      margin: 0.5em; }
+
 h1 {
   /*center the text in a text dedicated block*/
   text-align: center;
   color: #3f3fa0; }
+  h1 strong {
+    font-size: 1.5em;
+    font-weight: bold; }
 
 .grid-container {
   /*grids creation*/
@@ -10,39 +31,60 @@ h1 {
   display: grid;
   grid-template-columns: auto auto auto;
   /*ecart qui sépart toutes les case entre elles*/
-  gap: 10px; }
+  gap: 10px;
+  /* SCSS set of indications */ }
+  .grid-container div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+    .grid-container div img {
+      width: 6em;
+      height: auto; }
+  .grid-container div:nth-child(5) > img, .grid-container div:nth-child(6) > img, .grid-container div:nth-child(7) > img {
+    width: 9em;
+    height: 9em; }
 
 .grid-container > div {
-  /*bricolage à modifier*/
-  padding: 20px;
+  padding: 0.5em;
   font-size: 30px;
   background-color: #357592;
-  border-radius: 0.1em; }
+  border-radius: 0.1em;
+  background-color: white; }
 
-* {
-  border: 1px solid black; }
-
+/*   *
+  {
+    border: 1px solid black;
+  } */
+/*the block that contains the search bar*/
 .grid-container div:nth-child(4) {
-  background-color: red;
-  /*determine the weight of the 4th dic block*/
+  background-color: #271b55;
+  /*determine the width of the 4th div block*/
   grid-column-start: 1;
   grid-column-end: 4;
-  /*enable flex reorganization*/
+  /*ENABLE flex flex reorganization*/
   /*we center the form */
   display: flex;
+  /*principal axis : x*/
   flex-direction: row;
+  /*center in principal axis - center in x*/
   justify-content: space-around;
+  /*center the items within the div block in the secondary axis (y axis)*/
   align-items: center; }
   .grid-container div:nth-child(4) form {
     /*height 150% de ce qui est */
-    height: 150%;
+    height: auto;
     width: 100%;
     /*ENABLE flex reorganization*/
     display: flex;
+    /*set y as principal axis*/
     flex-direction: column;
+    /*center the content of form in y*/
     justify-content: space-around;
-    align-items: center;
-    /* justify-content: center; */ }
+    /*center the content of form in x*/
+    align-items: center; }
+    .grid-container div:nth-child(4) form input {
+      /*we espace the 2 input elements*/
+      margin: 0.2em; }
     .grid-container div:nth-child(4) form input[name="q"] {
       width: clamp(200px, 50%, 600px);
       font-size: 0.8em;
