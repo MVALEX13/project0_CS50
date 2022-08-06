@@ -38,7 +38,7 @@ h1
   /*center the text in a text dedicated block*/
   text-align: center;
 
-  color: rgb(63, 63, 160);
+  color: #7843e6;
 
   strong
   {
@@ -67,7 +67,7 @@ h1
 
       img
       {
-        width: 6em;
+        width: clamp(1em, 80%, 6em);
         height: auto;
       }
     }
@@ -75,8 +75,8 @@ h1
     /* SCSS set of indications */
     %SPACE_IMG_SIZE
     {
-      width: 9em;
-      height: 9em;
+      width: clamp(1em, 80%, 10em);
+      height: auto;
     }
 
     div:nth-child(5)> img {@extend %SPACE_IMG_SIZE;}
@@ -109,8 +109,6 @@ h1
   .grid-container div:nth-child(4)
   {
 
-    background-color: rgb(39, 27, 85);
-
     /*determine the width of the 4th div block*/
     grid-column-start: 1;
     grid-column-end: 4;
@@ -130,6 +128,8 @@ h1
 
     form
     {
+      background-color: #7843e6;
+
       /*height 150% de ce qui est */
       height: auto;
 
@@ -146,6 +146,15 @@ h1
 
       /*center the content of form in x*/
       align-items: center;
+
+      padding: 0.3em;
+
+      /*border design*/
+      border-radius: 0.3em;
+      border-color: #fe02fe;
+      border-style: solid;
+      box-shadow:0.1em 0.2em 0.1em #03ffff;
+      
 
       input
       {
