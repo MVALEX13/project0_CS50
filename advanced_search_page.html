@@ -45,22 +45,22 @@
                 <form action="https://google.com/search">
                     <div class="champs">
                         <label for="word_id">Find pages with all these words</label>
-                        <!-- name used for the treatment of the form -->
-                        <input type="text" name="q" id="word_id">
+                        <!-- name used for the treatment of the form - got by looking the source code of Google advanced research-->
+                        <input type="text" name="as_q" id="word_id">
 
                         <label for="exact_expr_id">Find pages with this exact word or phrase :</label>
-                        <input type="text" name = "exact_expr" id = "exact_expr_id">
+                        <input type="text" name = "as_epq" id = "exact_expr_id">
 
                         <label for="any_word_id">Find pages with any of these words:</label>
-                        <input type="text" name = "eany_expr" id = "any_word_id">
+                        <input type="text" name = "as_oq" id = "any_word_id">
 
                         <label for="none_word_id">Find pages with none of these words:</label>
-                        <input type="text" name = "none_expr" id = "none_word_id">
+                        <input type="text" name = "as_eq" id = "none_word_id">
                     </div>
                     
                     <div>
                         <!-- "submit" to specify a button -->
-                        <input type="submit" value="Google Search">
+                        <input type="submit" value="Advanced Search">
                     </div>
                     
                 </form>

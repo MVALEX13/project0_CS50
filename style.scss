@@ -97,65 +97,66 @@ h1
     /*center the items within the div block in the secondary axis (y axis)*/
     align-items: center;
 
-    form
-    {
-      background-color: #7843e6;
-
-      height: auto;
-
-      width: 100%;
-
-      /*ENABLE flex reorganization*/
-      display: flex;
-
-      /*set y as principal axis*/
-      flex-direction: column;
-
-      /*center the content of form in y*/
-      justify-content: space-around;
-
-      /*center the content of form in x*/
-      align-items: center;
-
-      padding: 0.3em;
-
-      /*border design*/
-      border-radius: 0.3em;
-      border-color: #fe02fe;
-      border-style: solid;
-      box-shadow:0.1em 0.2em 0.1em #03ffff;
-        
-
-      input
-      {
-        /*we espace the 2 input elements*/
-        margin: 0.3em;
-      }
-
-      input[name="q"]
-      {
-        width: clamp(200px, 50%, 600px);
-
-        font-size: 1em;
-
-        padding-top: 0.1em;
-        padding-bottom: 0.1em;
-      }
-
-      input[type = "submit"]
-      {
-        /* width: clamp(50px, 25%, 200px); */
-        width: auto;
-
-        height: 2em;
-
-        border-radius: 0.5em;
-
-        font-size: 1em;
-      }
-    }
   }
 }
+
+form
+  {
+    background-color: #7843e6;
+
+    height: auto;
+
+    width: 100%;
+
+    /*ENABLE flex reorganization*/
+    display: flex;
+
+    /*set y as principal axis*/
+    flex-direction: column;
+
+    /*center the content of form in y*/
+    justify-content: space-around;
+
+    /*center the content of form in x*/
+    align-items: center;
+
+    padding: 0.3em;
+
+    /*border design*/
+    border-radius: 0.3em;
+    border-color: #fe02fe;
+    border-style: solid;
+    box-shadow:0.1em 0.2em 0.1em #03ffff;
+      
+
+    input
+    {
+      /*we espace the 2 input elements*/
+      margin: 0.3em;
+    }
+
+    input[type="text"]
+    {
+      width: clamp(200px, 50%, 600px);
+
+      font-size: 1em;
+
+      padding-top: 0.1em;
+      padding-bottom: 0.1em;
+    }
+
+    input[type = "submit"]
+    {
+      /* width: clamp(50px, 25%, 200px); */
+      width: auto;
+
+      height: 2em;
+
+      border-radius: 0.5em;
+
+      font-size: 1em;
+    }
+  }
 
 
 

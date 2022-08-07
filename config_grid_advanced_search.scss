@@ -43,6 +43,7 @@ $ sass --watch config_grid_advanced_search.scss:config_grid_advanced_search.css*
     }
 
   }
+
   /*div block containing advanced search_bar*/
   .advanced_search_bar
   {
@@ -67,6 +68,12 @@ $ sass --watch config_grid_advanced_search.scss:config_grid_advanced_search.css*
             grid-template-columns: repeat(2,1fr);
 
             gap: 1em;
+        }
+
+        input[type="submit"]
+        {
+            /* background-color: blue; */
+            /* border: 1px solid black */
         }
     }
 
