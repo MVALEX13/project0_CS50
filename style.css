@@ -60,7 +60,7 @@ h1 {
 form {
   background-color: #7843e6;
   height: auto;
-  width: 100%;
+  width: clamp(20em, 80%, 100em);
   /*ENABLE flex reorganization*/
   display: flex;
   /*set y as principal axis*/
@@ -89,7 +89,32 @@ form {
     height: 2em;
     border-radius: 0.5em;
     font-size: 1em; }
+  form input[name="btnI"] {
+    /*name of the running animation*/
+    animation-name: animation_button;
+    animation-duration: 10s;
+    /*time linear speed*/
+    animation-timing-function: linear;
+    /*start with the default color*/
+    animation-fill-mode: forwards;
+    /*the animation run/restart infintly*/
+    animation-iteration-count: infinite; }
+@keyframes animation_button {
+        /* from{
+          background-color: #e9e9ed;
+        }
 
+        to{
+          background-color: #00fefe;
+        } */
+  0% {
+    background-color: #e9e9ed; }
+  33% {
+    background-color: #ff00ff; }
+  66% {
+    background-color: #00fefe; }
+  100% {
+    background-color: #e9e9ed; } }
 .grid_container > div {
   padding: 0.5em;
   border-radius: 0.1em;
