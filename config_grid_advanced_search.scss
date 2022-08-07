@@ -1,0 +1,81 @@
+/*this file is used to adapt/personnalize slightly the mise en page of the advanced search page*/
+/*It complement the style.css which is common to all pages*/
+
+/*compilation command line :
+$ sass config_grid_advanced_search.scss:config_grid_advanced_search.css
+$ sass --watch config_grid_advanced_search.scss:config_grid_advanced_search.css*/
+
+
+/*ADVANCED SEARCH PAGE*/
+.grid_container
+{
+  /*the block that contains "Image""*/
+  div:nth-child(4)
+  {
+
+    /*determine the width of the 4th div block*/
+    grid-column-start: 1;
+    grid-column-end: 4;
+
+    /*ENABLE flex flex reorganization*/
+    /*we center the form */
+    display: flex;
+
+    /*principal axis : x*/
+    flex-direction: row;
+
+    /*center in principal axis - center in x*/
+    justify-content: space-around;
+
+    /*center the items within the div block in the secondary axis (y axis)*/
+    align-items: center;
+
+
+    p
+    {
+        font-size: 1.5em;
+        color: black;
+        opacity: 0.5;
+
+        font-style: italic;
+
+        margin: 0;
+    }
+
+  }
+  /*div block containing advanced search_bar*/
+  .advanced_search_bar
+  {
+    /*this block occups from the 1st to the 3rd column*/
+    grid-column: 1/4;
+    /*occups the 3rd row*/
+    grid-row: 3;
+
+    margin: 0;
+
+    form > div
+    {
+        display: grid;
+        grid-template-columns:  repeat(2, 1fr);
+        gap :1em;
+    }
+
+    form > input[type = "submit"]
+    {
+
+    }
+
+  }
+
+  /*the block containing the bottom settings theme picture*/
+  div:nth-child(6)
+  {
+    grid-column-start: 1;
+    grid-column-end: 4;
+
+    img
+    {
+      width: 40%;
+    }
+  }
+}

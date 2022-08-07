@@ -1,9 +1,74 @@
 <!DOCTYPE html>
 <html>
     <head>
-        
+        <title>Advanced Search</title>
+        <link rel = "stylesheet" href = "style.css" />
+
+        <!-- Grid configuration/personnalization -->
+        <style>
+            @import url('./config_grid_advanced_search.css');
+        </style>
     </head>
+
     <body>
         
+        <nav id="Google_search_nav">
+            <!-- unorganized list -->
+            <div>
+                <a href="index.html">Google Search</a>
+            </div>
+        </nav>
+
+        <h1><strong>S</strong>pace <strong>I</strong>nternational <strong>B</strong>rowser</h1>
+
+        <div class="grid_container">
+            <div class="item1" style="background-color: white;">
+                <img src="images/S.png" alt="S">
+            </div>
+            <div class="item2" style="background-color: white;">
+                <img src="images/I.png" alt="I">
+            </div>
+            <div class="item3" style="background-color: white;">
+                <img src="images/B.png" alt="B">
+            </div>
+            <div class="item4">
+                <p>Advanced Search</p>
+            </div>
+
+            <!-- requete (querie) au serveur de google -->
+            <!-- Le code backend de google est codé de manière à traité les informations 
+            dont le nom est name ="q" en les assemblant de la sorte dans l'url : 
+            "https://google.com/search?q=my_research" ce chemin est créé par le backend de google -->
+
+            <div class="advanced_search_bar">
+                <!-- action tells us toward quel web serveur datas will be send and treated -->
+                <form action="https://google.com/search">
+                    <div id="champ">
+                        <label for="word_id">Find pages with all these words</label>
+                        <!-- name used for the treatment of the form -->
+                        <input type="text" name="q" id="word_id">
+
+                        <label for="exact_expr_id">Find pages with this exact word or phrase :</label>
+                        <input type="text" name = "exact_expr" id = "exact_expr_id">
+
+                        <label for="any_word_id">Find pages with any of these words:</label>
+                        <input type="text" name = "eany_expr" id = "any_word_id">
+
+                        <label for="none_word_id">Find pages with none of these words:</label>
+                        <input type="text" name = "none_expr" id = "none_word_id">
+                    </div>
+                    
+
+                    <!-- "submit" to specify a button -->
+                    <input type="submit" value="Google Search">
+                </form>
+            </div>
+
+            <!-- <div class="item5"></div>  -->
+            <div class="item6">
+                <img src="images/settings.jpeg" alt="settings">
+            </div>
+            <!-- <div class="item7"></div>  --> 
+        </div> 
     </body>
 </html>

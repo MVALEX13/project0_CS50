@@ -1,0 +1,9 @@
+/*this file is used to adapt/personnalize slightly the mise en page of the index page*/
+/*It complement the style.css which is common to all pages*/
+.grid_container {
+  /* SCSS set of indications */ }
+  .grid_container div:nth-child(5) > img, .grid_container div:nth-child(6) > img, .grid_container div:nth-child(7) > img {
+    width: clamp(1em, 90%, 20em);
+    height: auto; }
+
+/*# sourceMappingURL=config_grid_index.css.map */

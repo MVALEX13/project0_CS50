@@ -2,8 +2,14 @@
 <html>
     <head>
         <title>Search</title>
+        
+        <!-- CSS code commun to the 3 pages -->
         <link rel = "stylesheet" href = "style.css" />
 
+        <!-- additionnal code to manage the particularity of this page over the others -->
+        <style>
+            @import url('./config_grid_index.css');
+        </style>
     </head>
 
     <body>
@@ -18,7 +24,7 @@
 
         <h1><strong>S</strong>pace <strong>I</strong>nternational <strong>B</strong>rowser</h1>
 
-        <div class="grid-container">
+        <div class="grid_container">
             <div class="item1" style="background-color: white;">
                 <img src="images/S.png" alt="S">
             </div>
@@ -34,7 +40,7 @@
             dont le nom est name ="q" en les assemblant de la sorte dans l'url : 
             "https://google.com/search?q=my_research" ce chemin est créé par le backend de google -->
 
-            <div class="item4">
+            <div class="search_bar">
                 <!-- action tells us toward quel web serveur datas will be send and treated -->
                 <form action="https://google.com/search">
                         <!-- name used for the treatment of the form -->

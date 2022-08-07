@@ -25,82 +25,73 @@ h1 {
     font-size: 1.5em;
     font-weight: bold; }
 
-.grid-container {
+.grid_container {
   /*grids creation*/
   /*.grid-container becomes a grid container*/
   display: grid;
-  grid-template-columns: auto auto auto;
+  /*1 screen fraction for each column - we want to force the equivalence of the 3 columns, 
+  it's why we don't use auto*/
+  grid-template-columns: repeat(3, 1fr);
   /*ecart qui sépart toutes les case entre elles*/
   gap: 10px;
-  /* SCSS set of indications */ }
-  .grid-container div {
+  /*the block that contains the search bar*/ }
+  .grid_container div {
+    /*each element positionned in the center of the block*/
     display: flex;
     justify-content: space-around;
     align-items: center; }
-    .grid-container div img {
-      width: clamp(1em, 80%, 6em);
+    .grid_container div img {
+      width: clamp(1em, 60%, 30em);
       height: auto; }
-  .grid-container div:nth-child(5) > img, .grid-container div:nth-child(6) > img, .grid-container div:nth-child(7) > img {
-    width: clamp(1em, 80%, 10em);
-    height: auto; }
+  .grid_container .search_bar {
+    /*determine the width of the 4th div block*/
+    grid-column-start: 1;
+    grid-column-end: 4;
+    /*ENABLE flex flex reorganization*/
+    /*we center the form */
+    display: flex;
+    /*principal axis : x*/
+    flex-direction: row;
+    /*center in principal axis - center in x*/
+    justify-content: space-around;
+    /*center the items within the div block in the secondary axis (y axis)*/
+    align-items: center; }
+    .grid_container .search_bar form {
+      background-color: #7843e6;
+      height: auto;
+      width: 100%;
+      /*ENABLE flex reorganization*/
+      display: flex;
+      /*set y as principal axis*/
+      flex-direction: column;
+      /*center the content of form in y*/
+      justify-content: space-around;
+      /*center the content of form in x*/
+      align-items: center;
+      padding: 0.3em;
+      /*border design*/
+      border-radius: 0.3em;
+      border-color: #fe02fe;
+      border-style: solid;
+      box-shadow: 0.1em 0.2em 0.1em #03ffff; }
+      .grid_container .search_bar form input {
+        /*we espace the 2 input elements*/
+        margin: 0.3em; }
+      .grid_container .search_bar form input[name="q"] {
+        width: clamp(200px, 50%, 600px);
+        font-size: 1em;
+        padding-top: 0.1em;
+        padding-bottom: 0.1em; }
+      .grid_container .search_bar form input[type="submit"] {
+        /* width: clamp(50px, 25%, 200px); */
+        width: auto;
+        height: 2em;
+        border-radius: 0.5em;
+        font-size: 1em; }
 
-.grid-container > div {
+.grid_container > div {
   padding: 0.5em;
-  font-size: 30px;
-  background-color: #357592;
   border-radius: 0.1em;
   background-color: white; }
-
-/*   *
-  {
-    border: 1px solid black;
-  } */
-/*the block that contains the search bar*/
-.grid-container div:nth-child(4) {
-  /*determine the width of the 4th div block*/
-  grid-column-start: 1;
-  grid-column-end: 4;
-  /*ENABLE flex flex reorganization*/
-  /*we center the form */
-  display: flex;
-  /*principal axis : x*/
-  flex-direction: row;
-  /*center in principal axis - center in x*/
-  justify-content: space-around;
-  /*center the items within the div block in the secondary axis (y axis)*/
-  align-items: center; }
-  .grid-container div:nth-child(4) form {
-    background-color: #7843e6;
-    /*height 150% de ce qui est */
-    height: auto;
-    width: 100%;
-    /*ENABLE flex reorganization*/
-    display: flex;
-    /*set y as principal axis*/
-    flex-direction: column;
-    /*center the content of form in y*/
-    justify-content: space-around;
-    /*center the content of form in x*/
-    align-items: center;
-    padding: 0.3em;
-    /*border design*/
-    border-radius: 0.3em;
-    border-color: #fe02fe;
-    border-style: solid;
-    box-shadow: 0.1em 0.2em 0.1em #03ffff; }
-    .grid-container div:nth-child(4) form input {
-      /*we espace the 2 input elements*/
-      margin: 0.2em; }
-    .grid-container div:nth-child(4) form input[name="q"] {
-      width: clamp(200px, 50%, 600px);
-      font-size: 0.8em;
-      padding-top: 0.1em;
-      padding-bottom: 0.1em; }
-    .grid-container div:nth-child(4) form input[type="submit"] {
-      /* width: clamp(50px, 25%, 200px); */
-      width: auto;
-      height: 2em;
-      border-radius: 0.5em;
-      font-size: 0.6em; }
 
 /*# sourceMappingURL=style.css.map */
