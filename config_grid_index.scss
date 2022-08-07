@@ -17,3 +17,35 @@ $ sass config_grid_index.scss:config_grid_index.css*/
     div:nth-child(6)> img {@extend %SPACE_IMG_SIZE;}
     div:nth-child(7)> img {@extend %SPACE_IMG_SIZE;}
 }
+
+form
+{
+    input[name= "btnI"]
+    {
+      /*name of the running animation*/
+      animation-name: animation_button;
+      animation-duration: 10s;
+      /*time linear speed*/
+      animation-timing-function: linear;
+      /*start with the default color*/
+      animation-fill-mode: forwards;
+      /*the animation run/restart infintly*/
+      animation-iteration-count: infinite;
+
+      @keyframes animation_button {
+        /* from{
+          background-color: #e9e9ed;
+        }
+
+        to{
+          background-color: #00fefe;
+        } */
+
+        0%{background-color: #e9e9ed;}
+        33%{background-color: #ff00ff;}
+        66%{background-color: #00fefe;}
+        100%{background-color: #e9e9ed;}
+        
+      }
+    }
+}
